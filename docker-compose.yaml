@@ -21,6 +21,8 @@ services:
       - 8888:8888
 
   ngrok:
+    depends_on:
+      - notebook
     image: ngrok/ngrok:3.22.1-alpine-e0691d2
     container_name: ngrok
     networks:
