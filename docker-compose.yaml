@@ -1,0 +1,56 @@
+networks:
+  rag:
+    name: rag
+    driver: bridge
+
+services:
+  notebook:
+    #image: quay.io/jupyter/datascience-notebook:python-3.12.10
+    image: quay.io/jupyter/scipy-notebook:python-3.12.10
+    container_name: notebook
+    networks:
+      - rag
+    entrypoint: start-notebook.py
+    #command:
+    #  #- '--ServerApp.password_required=False'
+    environment:
+    - JUPYTER_TOKEN=token
+    volumes:
+      - ./notebook:/home/jovyan
+    ports:
+      - 8888:8888
+
+  ngrok:
+    image: ngrok/ngrok:3.22.1-alpine-e0691d2
+    container_name: ngrok
+    networks:
+      - rag
+    #entrypoint: start-notebook.py
+    command:
+      - 'http'
+      - 'notebook:8888'
+      - '--log=stdout'
+    env_file:
+      - path: ./.env
+        required: true # default
+
+  qdrant:
+    container_name: qdrant
+    image: qdrant/qdrant:v1.14.0
+    restart: on-failure
+    networks:
+      - rag
+    #environment:
+    #  QDRANT__SERVICE__API_KEY: password
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+
+volumes:
+  notebook:
+    name: notebook
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: notebook
