@@ -1,0 +1,3 @@
+[submodule "notebook/website"]
+	path = notebook/website
+	url = https://github.com/kubernetes/website.git

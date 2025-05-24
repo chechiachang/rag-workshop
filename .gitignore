@@ -177,4 +177,6 @@ cython_debug/
 .DS_Store
 
 # docker volume directories
-notebook
+notebook/*
+!notebook/website
+!notebook/rag-workshop.ipynb
