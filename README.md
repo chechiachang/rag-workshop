@@ -9,6 +9,7 @@ Workshop lecture on [2025 DevOpsDay](https://devopsdays.tw/2025/workshop-page/37
 git clone this repository
 
 - [ChatGPT](https://chatgpt.com/) 有問題先問他
+  - [OpenAI API](https://platform.openai.com/settings/organization/api-keys)，產生一隻 api key，放到 .env 裡面
 - [docker](https://docs.docker.com/engine/install/)
 - [ngrok](https://dashboard.ngrok.com/login)
   - 登入 Login -> 左手邊 Identity & Access -> Authtokens -> Add Tunnel authtoken -> 寫入 `.env` 檔案
@@ -33,6 +34,11 @@ t=2025-05-23T14:48:43+0000 lvl=info msg="started tunnel" obj=tunnels name=comman
 使用browser 透過連結進入 notebook
 https://da38-36-229-233-44.ngrok-free.app 
 
+password or token:
+```
+token
+```
+
 # 4. Stop the Environment 停止環境並移除資料卷
 
 Stop the environment and remove the volumes
@@ -40,3 +46,9 @@ Stop the environment and remove the volumes
 ```
 make down
 ```
+
+# Reference
+
+- https://platform.openai.com/docs/guides/embeddings
+- https://www.trulens.org/getting_started/quickstarts/quickstart/
+- https://github.com/Azure-Samples/ai-rag-chat-evaluator

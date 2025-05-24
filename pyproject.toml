@@ -1,0 +1,44 @@
+[project]
+name = "rag-workshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "chechiachang", email = "untru1999@chechia.net" }]
+requires-python = ">=3.13"
+dependencies = [
+    "nest-asyncio>=1.6.0",
+    "openai>=1.82.0",
+    "openai-agents>=0.0.16",
+    "pydantic>=2.11.5",
+    "pydantic-ai[logfire]>=0.2.6",
+    "python-dotenv>=1.1.0",
+]
+
+[tool.ruff]
+exclude = ["build"]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "B",   # flake8-bugbear
+    "C",   # flake8-comprehensions
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "SIM", # flake8-simplify
+    "UP",  # pyupgrade
+    "W",   # pycodestyle warnings
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.mypy]
+ignore_missing_imports = true
