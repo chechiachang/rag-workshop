@@ -5,4 +5,22 @@ up:
 
 down:
 	docker-compose down -v
-	rm -rf notebook
+	rm -rf notebook/.ipynb_checkpoints
+	rm -rf notebook/.ipython
+	rm -rf notebook/.jupyter
+	rm -rf notebook/.local
+
+format:
+	uv run ruff format src
+
+lint:
+	uv run ruff check src
+
+fix:
+	uv run ruff check --fix src
+
+type:
+	uv run mypy --install-types --non-interactive src
+
+test:
+	uv run pytest -v -s --cov=src tests
