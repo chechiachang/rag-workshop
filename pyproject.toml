@@ -6,6 +6,7 @@ readme = "README.md"
 authors = [{ name = "chechiachang", email = "untru1999@chechia.net" }]
 requires-python = ">=3.13"
 dependencies = [
+    "evals>=1.0.3.post1",
     "nest-asyncio>=1.6.0",
     "openai>=1.82.0",
     "openai-agents>=0.0.16",
