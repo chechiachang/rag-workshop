@@ -18,7 +18,6 @@ git clone this repository
 ```
 NGROK_AUTHTOKEN=
 ```
-
 # 2. Start the Environment 啟動環境
 
 Start the environment
@@ -34,6 +33,8 @@ t=2025-05-23T14:48:43+0000 lvl=info msg="started tunnel" obj=tunnels name=comman
 使用browser 透過連結進入 notebook
 https://da38-36-229-233-44.ngrok-free.app 
 
+如果你是在自己的本機上執行，可以透過 localhost:8888 進入 notebook，不需要透過 ngrok
+
 password or token:
 ```
 token
@@ -47,6 +48,19 @@ Stop the environment and remove the volumes
 make down
 ```
 
+### Ngrok Rate limit
+
+90分鍾工作坊時間內，ngrok 免費帳號有流量限制，請注意。
+
+一般來說不太容易踩到。如果踩到表示你太努力了。
+
+HTTPS Endpoint Requests
+- 20,034 of 20,000
+TCP Endpoint Connections
+- 0 of 5,000
+TLS Endpoint Connections
+- 0 of 5,000
+
 # Reference
 
 - https://github.com/openai/openai-cookbook/blob/main/examples/vector_databases/qdrant/Getting_started_with_Qdrant_and_OpenAI.ipynb
@@ -59,7 +73,7 @@ make down
 # TODO
 
 - [ ] data preprocessing
-- [ ] openai embedding
+- [v] openai embedding
   - [Model max input & price](https://platform.openai.com/docs/guides/embeddings?lang=python#embedding-models)
   - [Qdrant](https://qdrant.tech/documentation/embeddings/openai/)
 - [ ] [trulens](https://www.trulens.org/getting_started/quickstarts/quickstart/#get-data)
