@@ -74,7 +74,7 @@ You are a helpful assistant
 input = "Write a haiku about recursion in programming."
 
 
-async def main() -> None:
+async def chat() -> None:
     result = await Runner.run(
         starting_agent=Agent(
             name="Assistant",
@@ -88,7 +88,22 @@ async def main() -> None:
     print(result.final_output)
 
 
-asyncio.run(main())
+# asyncio.run(chat())
+
+for dirname, _, _ in os.walk('./notebook/website/content/en'):
+    print(dirname)
+
+# https://platform.openai.com/docs/guides/embeddings?lang=python
+async def embedding() -> None:
+    embedding = await openai_client.embeddings.create(
+        model="text-embedding-3-large",
+        input=input,
+        encoding_format="float",
+    )
+    print(embedding.data[0].embedding)
+
+
+#asyncio.run(embedding())
 
 # const embedding = await openai.embeddings.create({
 #  model: "text-embedding-3-small",

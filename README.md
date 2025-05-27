@@ -49,6 +49,18 @@ make down
 
 # Reference
 
+- https://github.com/openai/openai-cookbook/blob/main/examples/vector_databases/qdrant/Getting_started_with_Qdrant_and_OpenAI.ipynb
 - https://platform.openai.com/docs/guides/embeddings
 - https://www.trulens.org/getting_started/quickstarts/quickstart/
 - https://github.com/Azure-Samples/ai-rag-chat-evaluator
+- https://github.com/kdhaw6/LLM-RAG-based-system
+- https://github.com/ray-project/llm-applications/blob/main/notebooks/rag.ipynb
+
+# TODO
+
+- [ ] data preprocessing
+- [ ] openai embedding
+  - [Model max input & price](https://platform.openai.com/docs/guides/embeddings?lang=python#embedding-models)
+  - [Qdrant](https://qdrant.tech/documentation/embeddings/openai/)
+- [ ] [trulens](https://www.trulens.org/getting_started/quickstarts/quickstart/#get-data)
+- [ ] kaggle notebook
