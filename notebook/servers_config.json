@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "yfmcp": {
+      "command": "uvx",
+      "args": ["yfmcp"],
+      "description": "Yahoo Finance for fetching stock data, news, and other financial information"
+    }
+  }
+}
