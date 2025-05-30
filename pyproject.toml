@@ -7,12 +7,24 @@ authors = [{ name = "chechiachang", email = "untru1999@chechia.net" }]
 requires-python = ">=3.13"
 dependencies = [
     "evals>=1.0.3.post1",
+    "langchain-community>=0.3.24",
+    "langchain-openai>=0.3.18",
+    "langchain-qdrant>=0.2.0",
+    "markdown>=3.8",
     "nest-asyncio>=1.6.0",
     "openai>=1.82.0",
     "openai-agents>=0.0.16",
+    "pandas>=2.2.3",
     "pydantic>=2.11.5",
     "pydantic-ai[logfire]>=0.2.6",
     "python-dotenv>=1.1.0",
+    "qdrant-client>=1.14.2",
+    "ragas>=0.2.15",
+    "sacrebleu>=2.5.1",
+    "tenacity>=9.1.2",
+    "tqdm>=4.67.1",
+    "unstructured>=0.17.2",
+    "wget>=3.2",
 ]
 
 [tool.ruff]
