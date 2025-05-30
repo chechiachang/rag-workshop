@@ -5,8 +5,7 @@ networks:
 
 services:
   notebook:
-    #image: quay.io/jupyter/datascience-notebook:python-3.12.10
-    image: quay.io/jupyter/scipy-notebook:python-3.12.10
+    image: quay.io/jupyter/base-notebook:python-3.12.10
     container_name: notebook
     networks:
       - rag
@@ -14,7 +13,7 @@ services:
     #command:
     #  #- '--ServerApp.password_required=False'
     environment:
-    - JUPYTER_TOKEN=token
+    - JUPYTER_TOKEN=workshop1234!
     volumes:
       - ./notebook:/home/jovyan
     ports:
