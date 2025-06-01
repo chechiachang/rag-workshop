@@ -4,11 +4,7 @@ up:
 	docker logs ngrok
 
 down:
-	docker-compose down -v
-	rm -rf notebook/.ipynb_checkpoints
-	rm -rf notebook/.ipython
-	rm -rf notebook/.jupyter
-	rm -rf notebook/.local
+	docker-compose down
 
 format:
 	uv run ruff format src
