@@ -30,7 +30,7 @@ services:
       - 'notebook:8888'
       - '--log=stdout'
     environment:
-    - NGROK_AUTHTOKEN="填上你的 ngrok authtoken" ### 你的 ngrok authtoken
+    - NGROK_AUTHTOKEN="your-token"
 
   qdrant:
     container_name: qdrant
