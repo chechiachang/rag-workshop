@@ -2,7 +2,7 @@
 
 - [2025 DevOpsDay 工作坊](https://devopsdays.tw/2025/workshop-page/3788)教材
 - Workshop lecture on [2025 DevOpsDay](https://devopsdays.tw/2025/workshop-page/3788)
-- 需要搭配投影片[https://chechia.net/zh-hant/slides/2025-06-05-devops-rag-internal-ai/](https://chechia.net/zh-hant/slides/2025-06-05-devops-rag-internal-ai/)
+- 需要搭配投影片[https://chechia.net/slides/2025-06-05-devops-rag-internal-ai/](https://chechia.net/slides/2025-06-05-devops-rag-internal-ai/)
 
 # Getting Started
 
