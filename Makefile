@@ -19,4 +19,4 @@ type:
 	uv run mypy --install-types --non-interactive src
 
 test:
-	uv run pytest -v -s --cov=src tests
+	uv run pytest tests/ -v --tb=short
