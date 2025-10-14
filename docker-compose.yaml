@@ -20,7 +20,8 @@ services:
   ngrok:
     depends_on:
       - notebook
-    image: ngrok/ngrok:3.22.1-alpine-e0691d2
+    #image: ngrok/ngrok:3.22.1-alpine-e0691d2
+    image: quay.io/jhooooo999/ngrok:3.30.0-alpine-8b7ac94
     container_name: ngrok
     networks:
       - rag
